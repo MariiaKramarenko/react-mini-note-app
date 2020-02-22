@@ -4,6 +4,7 @@ import {BrowserRouter, Route, Switch} from "react-router-dom";
 import {Home} from "./pages/Home.js";
 import {About} from "./pages/About.js";
 import {Navbar} from "./components/Navbar";
+import {Author} from "./pages/Author";
 
 function App() {
   return (
@@ -12,8 +13,7 @@ function App() {
   	    	<div className="container pt-4">  	   
            		<Route path={'/'} exact component={Home} />
            		<Route path={'/about'} component={About} />
-                 <h1>Test</h1>
-                  
+           		<Route path={'/author'} component={Author} />                 
         	</div>
     	</BrowserRouter>
   );
