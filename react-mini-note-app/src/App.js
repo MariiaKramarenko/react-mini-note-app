@@ -6,9 +6,12 @@ import {About} from "./pages/About.js";
 import {Navbar} from "./components/Navbar";
 import {Author} from "./pages/Author";
 import {Alert} from "./components/Alert";
+import {AlertState} from './context/alert/AlertState';
+
 
 function App() {
   return (
+    <AlertState>
   		<BrowserRouter>
   		  	<Navbar/>
   	    	<div className="container pt-4">
@@ -18,6 +21,7 @@ function App() {
            		<Route path={'/author'} component={Author} />                 
         	</div>
     	</BrowserRouter>
+      </AlertState>
   );
 }
 
