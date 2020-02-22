@@ -1,18 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
+import {Home} from "./pages/Home.js";
+import {About} from "./pages/About.js";
+import {Navbar} from "./components/Navbar";
 
 function App() {
   return (
-  	<BrowserRouter>
-  	   <Switch>
-           <Route />
-    <div className="container pt-4">
-     <h1>Test</h1>
-    </div>
-       </Switch>
-    </BrowserRouter>
+  		<BrowserRouter>
+  		  	<Navbar/>
+  	    	<div className="container pt-4">  	   
+           		<Route path={'/'} exact component={Home} />
+           		<Route path={'/about'} component={About} />
+                 <h1>Test</h1>
+                  
+        	</div>
+    	</BrowserRouter>
   );
 }
 
