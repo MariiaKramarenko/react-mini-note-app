@@ -7,14 +7,14 @@ import {alertReducer} from "./alertReducer";
 export const AlertState = ({children}) =>{//контекст вызова для работы с алертом
 	const [state, dispatch] = useReducer(alertReducer, {visible: false})//созд массив и указываем что исп редьюсер alertReducer, второй параметр-initial state
 	
-    const show = (text, type = "warning") =>{
-    	dispatch({
-    		type: SHOW_ALERT,
-    		payload: {text, type}
+    const show = (text, type = "warning") =>{//функция которая показывает alert
+    	dispatch({//она диспатчит экшн
+    		type: SHOW_ALERT,//экшн показа алерта
+    		payload: {text, type}//payload-объект с данными кот вводится в input, type-тип алерта
     	})
     }
 
-    const hide = ()=> dispatch({type: HIDE_ALERT})
+    const hide = ()=> dispatch({type: HIDE_ALERT})//функция которая скрывает алерт, диспатчит экшн
 
 
 	return(

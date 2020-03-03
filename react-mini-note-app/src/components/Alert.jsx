@@ -12,7 +12,7 @@ if(!alert.visible){//если visible является false тогда возв
 return (
 	<div className={`alert alert-${alert.type || "warning"} alert-dismissible`}>
 		<strong>Warning!</strong>{alert.text}
-		<button onClick ={hide} type="button" class="close"  aria-label="Close">
+		<button onClick={hide} type="button" className="close"  aria-label="Close">
 		<span aria-hidden="true">&times;</span>
 	</button>
 </div>

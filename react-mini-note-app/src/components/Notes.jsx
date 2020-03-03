@@ -6,10 +6,10 @@ export const Notes = ({notes}) => {
      {notes.map(note =>(//мапим заметки
      	<li className="list-group-item note" key={note.id} >
      	<div>
-     	<strong>{note.title}</strong>
-     	<small>{new Date().toLocaleDateString()}</small>
+     	  <strong>{note.title}</strong>
+     	  <small>{new Date().toLocaleDateString()}</small>
      	</div>
-        <button type="button" className="btn btn-outline-danger btn-sm" >&times;</button>
+            <button type="button" className="btn btn-outline-danger btn-sm" >&times;</button>
      	</li>
      	))}
 
