@@ -1,16 +1,17 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import {Home} from "./pages/Home.js";
 import {About} from "./pages/About.js";
 import {Navbar} from "./components/Navbar";
 import {Author} from "./pages/Author";
 import {Alert} from "./components/Alert";
-import {AlertState} from './context/alert/AlertState';
-
+import {AlertState} from "./context/alert/AlertState";
+import {FirebaseState} from "./context/firebase/FirebaseState";
 
 function App() {
   return (
+    <FirebaseState>
     <AlertState>
   		<BrowserRouter>
   		  	<Navbar/>
@@ -22,6 +23,7 @@ function App() {
         	</div>
     	</BrowserRouter>
       </AlertState>
+      </FirebaseState>
   );
 }
 
