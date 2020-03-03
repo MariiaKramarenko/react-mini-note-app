@@ -1,16 +1,18 @@
-import React, {Fragment} from 'react';
+import React, {useContext} from 'react';
+import {AlertContext} from "../context/alert/alertContext";
 
+export const Alert = () =>{
 
-export const Alert = ({alert}) =>{
+const {alert, hide} = useContext(AlertContext)
 
-if(!alert){
-return null
+if(!alert.visible){//если visible является false тогда возвращаем 
+	return null
 }
 
 return (
 	<div className={`alert alert-${alert.type || "warning"} alert-dismissible`}>
 		<strong>Warning!</strong>{alert.text}
-		<button type="button" class="close"  aria-label="Close">
+		<button onClick ={hide} type="button" class="close"  aria-label="Close">
 		<span aria-hidden="true">&times;</span>
 	</button>
 </div>
