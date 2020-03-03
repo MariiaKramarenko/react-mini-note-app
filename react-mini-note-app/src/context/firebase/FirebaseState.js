@@ -1,5 +1,5 @@
-import React from 'FirebaseContext'
-import {FirebaseContext} from './firebaseContext'
+import React from 'react';
+import {FirebaseContext} from './firebaseContext';
 
 export const FirebaseState = ({children}) =>{
 	return(
